@@ -15,6 +15,11 @@ app.set('views', './views');
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 
+app.get('/aaa', (req, res) => {
+  console.log(req.headers);
+  res.send('hello');
+});
+
 app.get('/', (req, res) => {
   res.render('index', { title: 'Hey', message: 'Hello there!' });
 });
