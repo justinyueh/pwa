@@ -16,11 +16,16 @@ app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 
 app.get('/aaa', (req, res) => {
-  console.log(req.headers);
+  console.log(req.url);
+  console.log('cloud-ip-header', req.headers['cloud-ip-header']);
+  console.log('x-forwarded-for', req.headers['x-forwarded-for']);
   res.send('hello');
 });
 
 app.get('/', (req, res) => {
+  console.log(req.url);
+  console.log('cloud-ip-header', req.headers['cloud-ip-header']);
+  console.log('x-forwarded-for', req.headers['x-forwarded-for']);
   res.render('index', { title: 'Hey', message: 'Hello there!' });
 });
 
