@@ -1,5 +1,6 @@
-const cacheName = 'weatherPWA-step-6-4';
-const dataCacheName = 'weatherData-v1';
+const version = 'v3';
+const cacheName = `weatherPWA-step-6-4-${version}`;
+const dataCacheName = `weatherData-${version}`;
 
 const filesToCache = [
   '/',
