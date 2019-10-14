@@ -359,8 +359,11 @@
 
   // TODO add service worker code here
   if ('serviceWorker' in navigator) {
+    document.getElementById('pwa').innerText = 'pwa ok';
     navigator.serviceWorker
       .register('./service-worker.js')
       .then(() => { console.log('Service Worker Registered'); });
+  } else {
+    document.getElementById('pwa').innerText = 'pwa not ok';
   }
 }());
