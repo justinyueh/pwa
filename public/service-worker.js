@@ -1,4 +1,4 @@
-const version = 'v3';
+const version = 'v6';
 const cacheName = `weatherPWA-step-6-4-${version}`;
 const dataCacheName = `weatherData-${version}`;
 
